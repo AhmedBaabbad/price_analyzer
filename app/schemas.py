@@ -7,3 +7,5 @@ class PriceInput(BaseModel):
 
 class AnalysisResult(BaseModel):
     trend: str
+    score: float
+    comment: str

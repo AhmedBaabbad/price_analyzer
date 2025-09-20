@@ -7,5 +7,5 @@ router = APIRouter()
 
 @router.post("/analyze", response_model=AnalysisResult)
 def analyze_price(data: PriceInput):
-    trend = predict_price_trend(data.price)
-    return AnalysisResult(trend=trend)
+    result = predict_price_trend(data.price)
+    return AnalysisResult(**result)
